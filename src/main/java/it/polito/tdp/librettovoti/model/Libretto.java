@@ -14,6 +14,40 @@ public class Libretto {
 	public void add(Voto v) {
 		listaVoti.add(v);
 	}
+	/*
+	public void stampaVotiUguali (int punteggio) {
+		// il Libretto stampa da solo i voti
+	}
+	
+	public String votiUguali (int punteggio) {
+		// calcola una stringa che contiene i voti
+		// sarà poi il chiamante a stamparli
+		// --> Solo il NOME?
+		// o Tutto il voto.toString()
+	}*/
+	
+	public List<Voto> listaVotiUguali (int punteggio){
+		
+		// restituisce solo i voti uguali al criterio
+		List <Voto> risultato = new ArrayList<>();
+		for (Voto v: this.listaVoti) {
+			if (v.getVoto()==punteggio)
+				risultato.add(v);
+		}
+		return risultato;
+		
+	}
+	
+	public Libretto votiUguali(int punteggio) {
+		Libretto risultato = new Libretto();
+		
+		for (Voto v: this.listaVoti) {
+			if (v.getVoto()==punteggio) {
+				risultato.add(v);
+			}
+		}
+		return risultato;
+	}
 	
 	public String toString() {
 		
@@ -25,5 +59,7 @@ public class Libretto {
 		return s;
 		
 	}
+	
+	
 
 }
