@@ -35,6 +35,8 @@ public class TestLibretto {
 		Libretto librettoVenticinque = libretto.votiUguali(25);
 		System.out.println(librettoVenticinque);
 		
+		Voto v = libretto.ricercaCorso("Fisica 1");
+		System.out.println(v);
 		
 	}
 
